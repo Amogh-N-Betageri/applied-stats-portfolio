@@ -5,19 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Applied Statistics | Automation & Robotics</title>
 
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
     
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- AOS Animation CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <!-- Tailwind CSS (for layout utilities) -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- MathJax for Formulas -->
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
     <style>
@@ -274,17 +269,36 @@
         }
 
         .lightbox-content {
-            width: 95vw; height: 95vh; background: var(--bg-color); border-radius: 1rem;
-            display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            width: 90vw; 
+            height: 90vh; 
+            background: #f8fafc; 
+            border-radius: 1rem;
+            display: flex; 
+            flex-direction: column; 
+            overflow: hidden; 
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
         }
         
         .lightbox-header {
             padding: 1rem; background: var(--glass-bg); border-bottom: 1px solid var(--glass-border);
             display: flex; justify-content: space-between; align-items: center;
+            color: #1e293b; /* Ensure text is visible on light background */
+        }
+
+        .pdf-frame {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
         }
 
         .media-frame {
-            flex: 1; width: 100%; border: none; background: #fff; display: flex; align-items: center; justify-content: center;
+            flex: 1; 
+            width: 100%; 
+            height: 100%;
+            background: #ccc; 
+            overflow: hidden;
+            display: flex; align-items: center; justify-content: center;
         }
         .media-frame img { max-width: 100%; max-height: 100%; object-fit: contain; }
 
@@ -326,7 +340,6 @@
     </button>
 
     <div class="app-container">
-        <!-- Sidebar Navigation -->
         <nav class="sidebar" id="sidebar">
             <div class="mb-8 text-center">
                 <div class="w-20 h-20 mx-auto bg-gradient-to-tr from-blue-500 to-amber-500 rounded-full flex items-center justify-center mb-3 shadow-lg">
@@ -363,10 +376,8 @@
             </div>
         </nav>
 
-        <!-- Main Content Area -->
         <main class="main-content">
 
-            <!-- ================= HOME PAGE ================= -->
             <section id="home" class="page-section active">
                 <div class="glass-panel p-8 mb-8" data-aos="fade-up">
                     <div class="flex flex-col md:flex-row items-center gap-8">
@@ -419,7 +430,6 @@
                 <h2 class="text-2xl font-bold mb-6 brand-font border-l-4 border-primary pl-4" data-aos="fade-right">Course Overview & Roadmap</h2>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- Chapter Cards -->
                     <div class="glass-card p-6 hover:border-primary transition-colors cursor-pointer" onclick="navigate('chapter1')" data-aos="fade-up" data-aos-delay="100">
                         <div class="text-4xl text-primary/20 absolute top-4 right-4 font-bold">01</div>
                         <h3 class="text-xl font-bold mb-2"><i class="fas fa-database text-primary mr-2"></i>Data Characterization</h3>
@@ -464,7 +474,6 @@
                 </div>
             </section>
 
-            <!-- ================= CHAPTER 1 ================= -->
             <section id="chapter1" class="page-section">
                 <div class="glass-panel p-8 mb-8 text-center relative overflow-hidden" data-aos="fade-down">
                     <div class="absolute -right-10 -top-10 opacity-10 text-9xl"><i class="fas fa-database"></i></div>
@@ -501,8 +510,7 @@
                         <h3 class="font-bold mb-4"><i class="fas fa-cogs mr-2 text-secondary"></i>Interactive Variable Classifier</h3>
                         <p class="text-sm mb-4">Classify the following automation variables to see the implications:</p>
                         <div class="flex flex-col gap-3" id="variable-game">
-                            <!-- Populated by JS -->
-                        </div>
+                            </div>
                         <p id="var-game-result" class="mt-4 font-bold text-accent"></p>
                     </div>
                 </div>
@@ -561,7 +569,6 @@
                 </div>
             </section>
 
-            <!-- ================= CHAPTER 2 ================= -->
             <section id="chapter2" class="page-section">
                 <div class="glass-panel p-8 mb-8 text-center relative overflow-hidden" data-aos="fade-down">
                     <div class="absolute -right-10 -top-10 opacity-10 text-9xl"><i class="fas fa-dice"></i></div>
@@ -651,7 +658,6 @@
                 </div>
             </section>
 
-            <!-- ================= CHAPTER 3 ================= -->
             <section id="chapter3" class="page-section">
                  <div class="glass-panel p-8 mb-8 text-center relative overflow-hidden" data-aos="fade-down">
                     <div class="absolute -right-10 -top-10 opacity-10 text-9xl"><i class="fas fa-chart-area"></i></div>
@@ -739,7 +745,6 @@
                 </div>
             </section>
 
-            <!-- ================= CHAPTER 4 ================= -->
             <section id="chapter4" class="page-section">
                 <div class="glass-panel p-8 mb-8 text-center relative overflow-hidden" data-aos="fade-down">
                     <div class="absolute -right-10 -top-10 opacity-10 text-9xl"><i class="fas fa-vial"></i></div>
@@ -839,7 +844,6 @@
                 </div>
             </section>
 
-            <!-- ================= CHAPTER 5 ================= -->
             <section id="chapter5" class="page-section">
                 <div class="glass-panel p-8 mb-8 text-center relative overflow-hidden" data-aos="fade-down">
                     <div class="absolute -right-10 -top-10 opacity-10 text-9xl"><i class="fas fa-project-diagram"></i></div>
@@ -915,7 +919,6 @@
                 </div>
             </section>
 
-            <!-- ================= LAB ASSESSMENTS ================= -->
             <section id="labs" class="page-section">
                 <div class="glass-panel p-8 mb-8 text-center relative overflow-hidden" data-aos="fade-down">
                     <div class="absolute -right-10 -top-10 opacity-10 text-9xl"><i class="fas fa-flask"></i></div>
@@ -924,7 +927,6 @@
                     <p class="text-lg text-muted">A comprehensive gallery of uploaded laboratory assessments and statistical reports.</p>
                 </div>
 
-                <!-- Admin Status Banner -->
                 <div class="admin-controls bg-primary/10 border border-primary/30 p-4 rounded-lg mb-8 items-center justify-between" data-aos="fade-in">
                     <div>
                         <h4 class="font-bold text-primary"><i class="fas fa-user-shield mr-2"></i>Admin Dashboard Active</h4>
@@ -934,11 +936,9 @@
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="lab-gallery" data-aos="fade-up">
-                    <!-- Gallery populated by JS -->
-                </div>
+                    </div>
             </section>
 
-            <!-- ================= REFERENCES ================= -->
             <section id="references" class="page-section">
                 <div class="glass-panel p-8 mb-8 text-center relative overflow-hidden" data-aos="fade-down">
                     <div class="absolute -right-10 -top-10 opacity-10 text-9xl"><i class="fas fa-book"></i></div>
@@ -962,10 +962,10 @@
                     </div>
 
                     <div class="glass-card p-6" data-aos="fade-up" data-aos-delay="200">
-                        <h3 class="text-xl font-bold mb-4 border-b border-gray-600/30 pb-2"><i class="fas fa-file-alt text-primary mr-2"></i>Automation & Robotics Focus</h3>
+                        <h3 class="text-xl font-bold mb-4 border-b border-gray-600/30 pb-2"><i class="fas fa-microchip text-primary mr-2"></i>Automation & Robotics Focus</h3>
                         <ul class="space-y-4 text-sm text-muted">
                             <li class="flex items-start">
-                                <i class="fas fa-microchip mt-1 mr-3 text-accent"></i>
+                                <i class="fas fa-robot mt-1 mr-3 text-accent"></i>
                                 <span><strong>Thrun, S., Burgard, W., & Fox, D.</strong> (2005). <em>Probabilistic Robotics</em>. MIT Press. (Foundational text for Chapter 2 & Bayes Filters).</span>
                             </li>
                             <li class="flex items-start">
@@ -974,14 +974,48 @@
                             </li>
                         </ul>
                     </div>
+
+                    <div class="glass-card p-6 md:col-span-2" data-aos="fade-up" data-aos-delay="300">
+                        <h3 class="text-xl font-bold mb-4 border-b border-gray-600/30 pb-2"><i class="fas fa-shield-alt text-red-400 mr-2"></i>Industrial Standards & Regulations</h3>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-muted">
+                            <ul class="space-y-4">
+                                <li class="flex items-start">
+                                    <i class="fas fa-file-contract mt-1 mr-3 text-accent"></i>
+                                    <span><strong>National Fire Protection Association.</strong> (2023). <em>NFPA 79: Electrical standard for industrial machinery</em>.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-file-contract mt-1 mr-3 text-accent"></i>
+                                    <span><strong>Occupational Safety and Health Administration.</strong> (2020). <em>29 CFR 1910.178: Powered industrial trucks</em>.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-file-contract mt-1 mr-3 text-accent"></i>
+                                    <span><strong>American Society of Mechanical Engineers.</strong> (2019). <em>ASME B56.1: Safety standard for low lift and high lift trucks</em>.</span>
+                                </li>
+                            </ul>
+                            
+                            <ul class="space-y-4">
+                                <li class="flex items-start">
+                                    <i class="fas fa-file-contract mt-1 mr-3 text-accent"></i>
+                                    <span><strong>International Organization for Standardization.</strong> (2016). <em>ISO 12100:2010 Safety of machinery — General principles for design — Risk assessment and risk reduction</em>.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-file-contract mt-1 mr-3 text-accent"></i>
+                                    <span><strong>International Organization for Standardization.</strong> (2015). <em>ISO 13849-1:2015 Safety of machinery — Safety-related parts of control systems — Part 1: General principles for design</em>.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-file-contract mt-1 mr-3 text-accent"></i>
+                                    <span><strong>Society of Automotive Engineers.</strong> (2022). <em>SAE J240: Life test for automotive storage batteries</em>.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </section>
 
         </main>
     </div>
 
-    <!-- Modals -->
-    <!-- Admin Login Modal -->
     <div class="modal-backdrop" id="login-modal">
         <div class="modal-content text-center">
             <div class="w-16 h-16 mx-auto bg-primary/20 rounded-full flex items-center justify-center mb-4">
@@ -1002,7 +1036,6 @@
         </div>
     </div>
 
-    <!-- Lightbox PDF/Image Viewer Modal -->
     <div class="modal-backdrop" id="lightbox-modal">
         <div class="lightbox-content">
             <div class="lightbox-header">
@@ -1013,12 +1046,10 @@
                 </div>
             </div>
             <div class="media-frame" id="lightbox-frame">
-                <!-- Iframe or Img injected here -->
-            </div>
+                </div>
         </div>
     </div>
 
-    <!-- Script Integrations -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
@@ -1663,9 +1694,9 @@
 
             const frameContainer = document.getElementById('lightbox-frame');
             if(lab.type.startsWith('image/')) {
-                frameContainer.innerHTML = `<img src="${lab.data}" alt="Lab Assessment Preview">`;
+                frameContainer.innerHTML = `<img src="${lab.data}" alt="Lab Assessment Preview" style="width:100%; height:100%; object-fit:contain;">`;
             } else {
-                frameContainer.innerHTML = `<iframe class="pdf-frame" src="${lab.data}#toolbar=0"></iframe>`;
+                frameContainer.innerHTML = `<iframe class="pdf-frame" src="${lab.data}"></iframe>`;
             }
 
             document.getElementById('lightbox-modal').classList.add('active');
