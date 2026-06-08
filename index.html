@@ -5,19 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Applied Statistics | Automation & Robotics</title>
 
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- AOS Animation CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-    <!-- Tailwind CSS (for layout utilities) -->
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- MathJax for Formulas -->
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
     <style>
@@ -268,7 +259,6 @@
     </button>
 
     <div class="app-container">
-        <!-- Sidebar Navigation -->
         <nav class="sidebar" id="sidebar">
             <div class="mb-8 text-center">
                 <div class="w-20 h-20 mx-auto bg-gradient-to-tr from-blue-500 to-amber-500 rounded-full flex items-center justify-center mb-3 shadow-lg">
@@ -305,10 +295,8 @@
             </div>
         </nav>
 
-        <!-- Main Content Area -->
         <main class="main-content">
 
-            <!-- ================= HOME PAGE ================= -->
             <section id="home" class="page-section active">
                 <div class="glass-panel p-8 mb-8" data-aos="fade-up">
                     <div class="flex flex-col md:flex-row items-center gap-8">
@@ -405,7 +393,6 @@
                 </div>
             </section>
 
-            <!-- ================= CHAPTER 1 ================= -->
             <section id="chapter1" class="page-section">
                 <div class="glass-panel p-8 mb-8 text-center relative overflow-hidden" data-aos="fade-down">
                     <div class="absolute -right-10 -top-10 opacity-10 text-9xl"><i class="fas fa-database"></i></div>
@@ -442,8 +429,7 @@
                         <h3 class="font-bold mb-4"><i class="fas fa-cogs mr-2 text-secondary"></i>Interactive Variable Classifier</h3>
                         <p class="text-sm mb-4">Classify the following automation variables to see the implications:</p>
                         <div class="flex flex-col gap-3" id="variable-game">
-                            <!-- Populated by JS -->
-                        </div>
+                            </div>
                         <p id="var-game-result" class="mt-4 font-bold text-accent"></p>
                     </div>
                 </div>
@@ -502,7 +488,6 @@
                 </div>
             </section>
 
-            <!-- ================= CHAPTER 2 ================= -->
             <section id="chapter2" class="page-section">
                 <div class="glass-panel p-8 mb-8 text-center relative overflow-hidden" data-aos="fade-down">
                     <div class="absolute -right-10 -top-10 opacity-10 text-9xl"><i class="fas fa-dice"></i></div>
@@ -592,7 +577,6 @@
                 </div>
             </section>
 
-            <!-- ================= CHAPTER 3 ================= -->
             <section id="chapter3" class="page-section">
                  <div class="glass-panel p-8 mb-8 text-center relative overflow-hidden" data-aos="fade-down">
                     <div class="absolute -right-10 -top-10 opacity-10 text-9xl"><i class="fas fa-chart-area"></i></div>
@@ -680,7 +664,6 @@
                 </div>
             </section>
 
-            <!-- ================= CHAPTER 4 ================= -->
             <section id="chapter4" class="page-section">
                 <div class="glass-panel p-8 mb-8 text-center relative overflow-hidden" data-aos="fade-down">
                     <div class="absolute -right-10 -top-10 opacity-10 text-9xl"><i class="fas fa-vial"></i></div>
@@ -780,7 +763,6 @@
                 </div>
             </section>
 
-            <!-- ================= CHAPTER 5 ================= -->
             <section id="chapter5" class="page-section">
                 <div class="glass-panel p-8 mb-8 text-center relative overflow-hidden" data-aos="fade-down">
                     <div class="absolute -right-10 -top-10 opacity-10 text-9xl"><i class="fas fa-project-diagram"></i></div>
@@ -856,7 +838,6 @@
                 </div>
             </section>
 
-            <!-- ================= LAB ASSESSMENTS ================= -->
             <section id="labs" class="page-section">
                 <div class="glass-panel p-8 mb-8 text-center relative overflow-hidden" data-aos="fade-down">
                     <div class="absolute -right-10 -top-10 opacity-10 text-9xl"><i class="fas fa-flask"></i></div>
@@ -874,11 +855,9 @@
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="lab-gallery" data-aos="fade-up">
-                    <!-- Populated by JS -->
-                </div>
+                    </div>
             </section>
 
-            <!-- ================= REFERENCES ================= -->
             <section id="references" class="page-section">
                 <div class="glass-panel p-8 mb-8 text-center relative overflow-hidden" data-aos="fade-down">
                     <div class="absolute -right-10 -top-10 opacity-10 text-9xl"><i class="fas fa-book"></i></div>
@@ -956,7 +935,6 @@
         </main>
     </div>
 
-    <!-- Modals -->
     <div class="modal-backdrop" id="login-modal">
         <div class="modal-content text-center">
             <div class="w-16 h-16 mx-auto bg-primary/20 rounded-full flex items-center justify-center mb-4">
@@ -989,7 +967,6 @@
         </div>
     </div>
 
-    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
@@ -1041,6 +1018,7 @@
             if(pageId === 'chapter5') initCh5Chart();
             if(pageId === 'home') animateCounters();
             
+            // Just render the labs using the hardcoded arrays, no fetch needed!
             if(pageId === 'labs') {
                 renderLabs();
             }
@@ -1430,6 +1408,7 @@
 
         // ================= LAB ASSESSMENTS & ADMIN LOGIC =================
         
+        // Hardcoded direct Google Drive links
         const publicLinks = [
             "https://drive.google.com/file/d/1GSMSGsnc2hMkzX44GTovZJn__-mmjmaY/view",
             "https://drive.google.com/file/d/1kVHjuYNW8PjPrPqtsKFiCPl3C_32ETib/view",
@@ -1488,17 +1467,18 @@
         function renderLabs() {
             const gallery = document.getElementById('lab-gallery');
             gallery.innerHTML = '';
-            
+
             for(let i = 0; i < 4; i++) {
+                const labNum = i + 1;
                 const isLocal = labData[i] && labData[i] !== null;
                 const link = isLocal ? labData[i].data : publicLinks[i];
-                const labName = isLocal ? labData[i].name : `Lab Assessment ${i+1}`;
+                const labName = isLocal ? labData[i].name : `Lab Assessment ${labNum}`;
                 const hasFile = isLocal || (publicLinks[i] && publicLinks[i] !== "");
                 
                 let cardHtml = `
                     <div class="glass-card flex flex-col overflow-hidden relative">
                         <div class="bg-gray-800 p-4 border-b border-gray-600/30 flex justify-between items-center">
-                            <h3 class="font-bold text-lg brand-font"><i class="fas fa-file-pdf text-red-400 mr-2"></i>Lab Assessment ${i+1}</h3>
+                            <h3 class="font-bold text-lg brand-font"><i class="fas fa-file-pdf text-red-400 mr-2"></i>Lab Assessment ${labNum}</h3>
                         </div>
                         
                         <div class="p-6 flex-1 flex flex-col items-center justify-center text-center min-h-[200px]">
@@ -1591,6 +1571,7 @@
                 frameContainer.outerHTML = `<img class="pdf-frame" id="pdf-frame" src="${url}" style="object-fit:contain;">`;
             } else {
                 let embedUrl = url;
+                // If it's a google drive link, convert to preview for iframe
                 if(url.includes('drive.google.com')) {
                     embedUrl = url.replace('/view', '/preview');
                 }
