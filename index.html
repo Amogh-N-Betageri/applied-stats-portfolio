@@ -165,17 +165,8 @@
             line-height: 1.2;
         }
 
-        .stat-box {
-            text-align: center;
-            padding: 1.5rem;
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--primary);
-            font-family: 'Space Grotesk';
-        }
+        .stat-box { text-align: center; padding: 1.5rem; }
+        .stat-number { font-size: 2.5rem; font-weight: 700; color: var(--primary); font-family: 'Space Grotesk'; }
 
         .interactive-widget {
             border: 1px solid var(--primary);
@@ -195,65 +186,26 @@
             margin-bottom: 1rem;
         }
         
-        .input-field:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 2px var(--primary-glow);
-        }
+        .input-field:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 2px var(--primary-glow); }
 
         .btn {
-            background: var(--primary);
-            color: white;
-            border: none;
-            padding: 0.5rem 1.5rem;
-            border-radius: 0.25rem;
-            cursor: pointer;
-            font-weight: 600;
-            transition: all 0.3s;
+            background: var(--primary); color: white; border: none; padding: 0.5rem 1.5rem;
+            border-radius: 0.25rem; cursor: pointer; font-weight: 600; transition: all 0.3s;
+            display: inline-block; text-decoration: none; text-align: center;
         }
 
-        .btn:hover {
-            background: var(--secondary);
-            transform: translateY(-2px);
-        }
+        .btn:hover { background: var(--secondary); transform: translateY(-2px); }
 
         /* Progress Bar */
         #scroll-progress {
-            position: fixed;
-            top: 0; left: var(--sidebar-width);
-            height: 4px;
-            background: var(--primary);
-            width: 0%;
-            z-index: 100;
-            transition: width 0.1s;
+            position: fixed; top: 0; left: var(--sidebar-width); height: 4px;
+            background: var(--primary); width: 0%; z-index: 100; transition: width 0.1s;
         }
 
-        /* Formula Box */
-        .formula-box {
-            background: rgba(245, 158, 11, 0.1);
-            border-left: 4px solid var(--accent);
-            padding: 1rem;
-            margin: 1rem 0;
-            border-radius: 0 0.5rem 0.5rem 0;
-            overflow-x: auto;
-        }
-
-        /* Engineering Insight */
-        .insight-box {
-            background: rgba(2, 132, 199, 0.1);
-            border-left: 4px solid var(--primary);
-            padding: 1rem;
-            margin: 1rem 0;
-            border-radius: 0 0.5rem 0.5rem 0;
-        }
-
-        /* Canvas Wrapper */
-        .chart-container {
-            position: relative;
-            height: 350px;
-            width: 100%;
-            margin: 2rem 0;
-        }
+        /* Boxes */
+        .formula-box { background: rgba(245, 158, 11, 0.1); border-left: 4px solid var(--accent); padding: 1rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; overflow-x: auto; }
+        .insight-box { background: rgba(2, 132, 199, 0.1); border-left: 4px solid var(--primary); padding: 1rem; margin: 1rem 0; border-radius: 0 0.5rem 0.5rem 0; }
+        .chart-container { position: relative; height: 350px; width: 100%; margin: 2rem 0; }
 
         /* Modals & Lightbox */
         .modal-backdrop {
@@ -269,38 +221,16 @@
         }
 
         .lightbox-content {
-            width: 90vw; 
-            height: 90vh; 
-            background: #f8fafc; 
-            border-radius: 1rem;
-            display: flex; 
-            flex-direction: column; 
-            overflow: hidden; 
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            width: 90vw; height: 90vh; background: #f8fafc; border-radius: 1rem;
+            display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
         }
         
         .lightbox-header {
             padding: 1rem; background: var(--glass-bg); border-bottom: 1px solid var(--glass-border);
-            display: flex; justify-content: space-between; align-items: center;
-            color: #1e293b; /* Ensure text is visible on light background */
+            display: flex; justify-content: space-between; align-items: center; color: #1e293b;
         }
 
-        .pdf-frame {
-            width: 100%;
-            height: 100%;
-            border: none;
-            display: block;
-        }
-
-        .media-frame {
-            flex: 1; 
-            width: 100%; 
-            height: 100%;
-            background: #ccc; 
-            overflow: hidden;
-            display: flex; align-items: center; justify-content: center;
-        }
-        .media-frame img { max-width: 100%; max-height: 100%; object-fit: contain; }
+        .pdf-frame { width: 100%; height: 100%; border: none; display: block; background: white; }
 
         /* Admin Styles */
         .admin-controls { display: none; }
@@ -309,16 +239,9 @@
 
         /* Mobile Responsive */
         .mobile-toggle {
-            display: none;
-            position: fixed;
-            top: 1rem; right: 1rem;
-            z-index: 1000;
-            background: var(--glass-bg);
-            border: none;
-            color: var(--text-main);
-            padding: 0.5rem;
-            border-radius: 0.5rem;
-            backdrop-filter: blur(10px);
+            display: none; position: fixed; top: 1rem; right: 1rem; z-index: 1000;
+            background: var(--glass-bg); border: none; color: var(--text-main);
+            padding: 0.5rem; border-radius: 0.5rem; backdrop-filter: blur(10px);
         }
 
         @media (max-width: 1024px) {
@@ -924,13 +847,13 @@
                     <div class="absolute -right-10 -top-10 opacity-10 text-9xl"><i class="fas fa-flask"></i></div>
                     <span class="bg-purple-500/20 text-purple-500 px-3 py-1 rounded-full text-sm font-bold tracking-wide uppercase">Practical Portfolio</span>
                     <h1 class="text-4xl font-bold mt-4 mb-2 brand-font">Lab Assessments Showcase</h1>
-                    <p class="text-lg text-muted">A comprehensive gallery of uploaded laboratory assessments and statistical reports.</p>
+                    <p class="text-lg text-muted">A comprehensive gallery of laboratory assessments and statistical reports.</p>
                 </div>
 
                 <div class="admin-controls bg-primary/10 border border-primary/30 p-4 rounded-lg mb-8 items-center justify-between" data-aos="fade-in">
                     <div>
                         <h4 class="font-bold text-primary"><i class="fas fa-user-shield mr-2"></i>Admin Dashboard Active</h4>
-                        <p class="text-sm text-muted">You can upload, replace, reorder, and delete assessment files. Changes are saved to Local Storage.</p>
+                        <p class="text-sm text-muted">You can upload and replace assessment files. Changes are saved to your Local Storage, overriding the public Drive links for this device.</p>
                     </div>
                     <button class="btn bg-red-600 hover:bg-red-700 text-sm" onclick="logoutAdmin()">Logout</button>
                 </div>
@@ -1041,12 +964,10 @@
             <div class="lightbox-header">
                 <h3 class="font-bold text-lg brand-font" id="lightbox-title">Document Viewer</h3>
                 <div class="flex gap-3">
-                    <a id="lightbox-download" href="#" download class="btn bg-secondary hover:bg-blue-400 text-sm py-1 px-3"><i class="fas fa-download mr-2"></i>Download</a>
-                    <button class="btn bg-red-500 hover:bg-red-600 text-sm py-1 px-3" onclick="closeLightbox()"><i class="fas fa-times"></i></button>
+                    <button class="btn bg-red-500 hover:bg-red-600 text-sm py-1 px-3" onclick="closeLightbox()"><i class="fas fa-times"></i> Close</button>
                 </div>
             </div>
-            <div class="media-frame" id="lightbox-frame">
-                </div>
+            <iframe class="pdf-frame" id="pdf-frame"></iframe>
         </div>
     </div>
 
@@ -1055,10 +976,8 @@
     <script>
         // ================= CORE UI LOGIC =================
         
-        // Initialize AOS animations
         AOS.init({ duration: 800, once: true });
 
-        // Theme Toggle
         let isDarkMode = true;
         function toggleTheme() {
             const body = document.body;
@@ -1069,41 +988,34 @@
                 body.classList.add('dark-mode');
                 icon.classList.remove('fa-sun');
                 icon.classList.add('fa-moon');
-                Chart.defaults.color = '#94a3b8'; // Update chart text color
+                Chart.defaults.color = '#94a3b8';
             } else {
                 body.classList.remove('dark-mode');
                 icon.classList.remove('fa-moon');
                 icon.classList.add('fa-sun');
                 Chart.defaults.color = '#64748b';
             }
-            // Trigger chart redraws for theme
             reRenderCharts();
         }
 
-        // Sidebar Toggle (Mobile)
         function toggleSidebar() {
             document.getElementById('sidebar').classList.toggle('active');
         }
 
-        // SPA Navigation Logic
         function navigate(pageId) {
-            // Update UI
             document.querySelectorAll('.page-section').forEach(el => el.classList.remove('active'));
             document.querySelectorAll('.nav-link').forEach(el => el.classList.remove('active'));
             
             document.getElementById(pageId).classList.add('active');
             document.querySelector(`.nav-link[href="#${pageId}"]`).classList.add('active');
             
-            // Re-trigger AOS for new content
             AOS.refresh();
             window.scrollTo({top: 0, behavior: 'smooth'});
 
-            // Render math equations on the new page
             if (window.MathJax) {
                 MathJax.typesetPromise();
             }
 
-            // Init specific page charts
             if(pageId === 'chapter1') initCh1Chart();
             if(pageId === 'chapter2') initCh2Chart();
             if(pageId === 'chapter3') updateNormalChart();
@@ -1111,13 +1023,11 @@
             if(pageId === 'home') animateCounters();
             if(pageId === 'labs') renderLabs();
             
-            // Close sidebar on mobile after click
             if(window.innerWidth <= 1024) {
                 document.getElementById('sidebar').classList.remove('active');
             }
         }
 
-        // Scroll Progress Bar
         window.onscroll = function() {
             let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
             let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -1125,7 +1035,6 @@
             document.getElementById("scroll-progress").style.width = scrolled + "%";
         };
 
-        // Number Counter Animation
         function animateCounters() {
             const counters = document.querySelectorAll('.stat-number');
             const speed = 200; 
@@ -1146,9 +1055,8 @@
             });
         }
 
-        // Handle initial load based on hash
         window.onload = () => {
-            Chart.defaults.color = '#94a3b8'; // Default dark mode font
+            Chart.defaults.color = '#94a3b8';
             Chart.defaults.font.family = "'Inter', sans-serif";
             
             const hash = window.location.hash.substring(1) || 'home';
@@ -1156,7 +1064,6 @@
             initVariableGame();
         };
 
-        // Re-render charts on theme change
         let ch1ChartInstance, ch2ChartInstance, ch3ChartInstance, ch5ChartInstance;
         function reRenderCharts() {
             if(ch1ChartInstance) ch1ChartInstance.update();
@@ -1208,7 +1115,6 @@
             
             if(arr.length === 0) return alert("Please enter valid numbers.");
             
-            // Math computations
             arr.sort((a,b) => a-b);
             const n = arr.length;
             const mean = arr.reduce((a,b) => a+b, 0) / n;
@@ -1220,7 +1126,6 @@
             const variance = arr.reduce((a,b) => a + Math.pow(b - mean, 2), 0) / (n-1);
             const sd = Math.sqrt(variance);
             
-            // Outlier Detection (1.5 IQR method)
             const q1 = arr[Math.floor(n*0.25)];
             const q3 = arr[Math.floor(n*0.75)];
             const iqr = q3 - q1;
@@ -1228,13 +1133,11 @@
             const upperBound = q3 + 1.5 * iqr;
             const outliers = arr.filter(x => x < lowerBound || x > upperBound);
 
-            // Update UI
             document.getElementById('res-mean').innerText = mean.toFixed(2);
             document.getElementById('res-median').innerText = median.toFixed(2);
             document.getElementById('res-sd').innerText = sd.toFixed(2);
             document.getElementById('res-outliers').innerText = outliers.length > 0 ? outliers.join(', ') : "None";
             
-            // Update Chart if active
             updateCh1Chart(arr);
         }
 
@@ -1259,9 +1162,9 @@
                 }
             });
         }
+
         function updateCh1Chart(data) {
              if(!ch1ChartInstance) return;
-             // Simplified binning logic for demo
              let bins = [0,0,0,0];
              data.forEach(x => {
                  if(x < 10.0) bins[0]++;
@@ -1283,7 +1186,6 @@
             document.getElementById('val-tpr').innerText = (tpr*100).toFixed(1) + "%";
             document.getElementById('val-fpr').innerText = (fpr*100).toFixed(1) + "%";
 
-            // Bayes Theorem: P(D|A) = (P(A|D) * P(D)) / (P(A|D)*P(D) + P(A|~D)*P(~D))
             const pD = prior;
             const pNotD = 1 - pD;
             const pA_given_D = tpr;
@@ -1295,7 +1197,7 @@
             document.getElementById('bayes-result').innerText = (probD_given_A * 100).toFixed(2) + "%";
         }
 
-        let coinFlipsData = [0, 0]; // [Tails(Fail), Heads(Success)]
+        let coinFlipsData = [0, 0]; 
         let totalFlips = 0;
         function initCh2Chart() {
             if(ch2ChartInstance) return;
@@ -1365,15 +1267,12 @@
             const usl = parseFloat(document.getElementById('nd-usl').value);
 
             let dataPoints = [];
-            // Generate points +/- 4 std deviations
             for (let i = mean - 4*sd; i <= mean + 4*sd; i += (8*sd)/100) {
                 dataPoints.push({x: i, y: getNormalDensity(i, mean, sd)});
             }
 
             ch3ChartInstance.data.datasets[0].data = dataPoints;
             
-            // Calculate scrap (Z-scores approximation)
-            // Using error function approximation for CDF
             function approxCDF(z) {
                 return 1 / (1 + Math.exp(-1.702 * z));
             }
@@ -1395,8 +1294,6 @@
             const n = parseFloat(document.getElementById('ht-n').value);
 
             const tStat = (xbar - mu0) / (s / Math.sqrt(n));
-            
-            // Rough p-value approximation for 1-tailed (xbar < mu0)
             const pApprox = 1 / (1 + Math.exp(1.702 * Math.abs(tStat))); 
             
             document.getElementById('ht-tstat').innerText = tStat.toFixed(3);
@@ -1439,7 +1336,6 @@
             const canvas = document.getElementById('ch5RegressionChart');
             const rect = canvas.getBoundingClientRect();
             
-            // Map click to chart scales
             const xAxis = ch5ChartInstance.scales.x;
             const yAxis = ch5ChartInstance.scales.y;
             
@@ -1482,7 +1378,6 @@
             const xBar = sumX / n;
             const yBar = sumY / n;
 
-            // Slope (b1) and Intercept (b0)
             const num = sumXY - (n * xBar * yBar);
             const den = sumXX - (n * xBar * xBar);
             
@@ -1492,7 +1387,6 @@
                 b0 = yBar - b1 * xBar;
             }
 
-            // Calculate R-Squared
             let sst = 0, ssr = 0;
             regressionPoints.forEach(p => {
                 const yPred = b0 + b1 * p.x;
@@ -1501,7 +1395,6 @@
             });
             const r2 = sst === 0 ? 1 : ssr / sst;
 
-            // Draw Line
             ch5ChartInstance.data.datasets[1].data = [
                 {x: 0, y: b0},
                 {x: 100, y: b0 + b1 * 100}
@@ -1515,18 +1408,23 @@
 
         // ================= LAB ASSESSMENTS & ADMIN LOGIC =================
         
-        // Admin Credentials
+        // Data Configuration for Google Drive Links
+        const publicLinks = [
+            "https://drive.google.com/file/d/1GSMSGsnc2hMkzX44GTovZJn__-mmjmaY/view",
+            "https://drive.google.com/file/d/1kVHjuYNW8PjPrPqtsKFiCPl3C_32ETib/view",
+            "https://drive.google.com/file/d/17gRMkqD1DdWHzW0M8MEQ1rKDkUIGVy_Z/view",
+            "https://drive.google.com/file/d/1WqzcD9iFTOgv7EG2IberOC5nsqRYU5qs/view"
+        ];
+
         const ADMIN_USER = "Amogh";
         const ADMIN_PASS = "EffortLessPlat@123";
         let isAdmin = sessionStorage.getItem('isAdmin') === 'true';
 
-        // Initialize state
         if(isAdmin) document.body.classList.add('is-admin');
         
-        // Lab Data Storage (4 Fixed Slots)
+        // Lab Data Storage (4 Fixed Slots for local override)
         let labData = JSON.parse(localStorage.getItem('applied_stats_labs')) || [null, null, null, null];
 
-        // Login Functions
         function toggleAdminLogin() {
             if(isAdmin) logoutAdmin();
             else openLoginModal();
@@ -1553,7 +1451,6 @@
                 document.body.classList.add('is-admin');
                 closeLoginModal();
                 if(document.getElementById('labs').classList.contains('active')) renderLabs();
-                // Change icon
                 document.getElementById('admin-icon').classList.replace('fa-lock', 'fa-unlock');
             } else {
                 document.getElementById('login-error').classList.remove('hidden');
@@ -1568,15 +1465,14 @@
             if(document.getElementById('labs').classList.contains('active')) renderLabs();
         }
 
-        // Render Labs Gallery
         function renderLabs() {
             const gallery = document.getElementById('lab-gallery');
             gallery.innerHTML = '';
 
             for(let i = 0; i < 4; i++) {
-                const lab = labData[i];
                 const labNum = i + 1;
-                const hasFile = lab !== null;
+                const isLocal = labData[i] !== null;
+                const link = isLocal ? labData[i].data : publicLinks[i];
                 
                 let cardHtml = `
                     <div class="glass-card flex flex-col overflow-hidden relative">
@@ -1585,46 +1481,21 @@
                         </div>
                         
                         <div class="p-6 flex-1 flex flex-col items-center justify-center text-center min-h-[200px]">
-                `;
-
-                if(hasFile) {
-                    const isImg = lab.type.startsWith('image/');
-                    const iconClass = isImg ? 'fa-image text-blue-400' : 'fa-file-pdf text-red-500';
-                    cardHtml += `
-                            <i class="fas ${iconClass} text-5xl mb-4 opacity-80"></i>
-                            <p class="text-sm font-bold text-primary truncate w-full px-4 mb-2">${lab.name}</p>
-                            <p class="text-xs text-muted mb-4">Size: ${(lab.size / 1024).toFixed(1)} KB</p>
+                            <i class="fas fa-file-pdf text-5xl mb-4 text-red-500 opacity-80"></i>
+                            <p class="text-sm font-bold text-primary truncate w-full px-4 mb-4">${isLocal ? labData[i].name : 'Stored on Google Drive'}</p>
                             
-                            <div class="flex gap-3 w-full public-controls justify-center mt-auto">
-                                <button class="btn py-2 px-4" onclick="openLightbox(${i})"><i class="fas fa-eye mr-2"></i>View</button>
+                            <div class="flex gap-3 w-full justify-center mt-auto">
+                                <button class="btn py-2 px-4" onclick="openLightbox('${link}', ${isLocal})"><i class="fas fa-eye mr-2"></i>View</button>
+                                ${!isLocal ? `<a href="${link.replace('/view', '/view?usp=sharing')}" target="_blank" class="btn bg-slate-700 hover:bg-slate-600"><i class="fas fa-download mr-2"></i>Download</a>` : ''}
                             </div>
                             
-                            <div class="flex gap-2 w-full admin-controls justify-center mt-auto">
-                                <button class="btn py-2 px-3 text-xs" onclick="openLightbox(${i})"><i class="fas fa-eye"></i> View</button>
-                                <button class="btn bg-amber-500 hover:bg-amber-600 py-2 px-3 text-xs" onclick="document.getElementById('file-upload-${i}').click()"><i class="fas fa-sync-alt"></i> Replace</button>
-                                <button class="btn bg-red-500 hover:bg-red-600 py-2 px-3 text-xs" onclick="deleteLab(${i})"><i class="fas fa-trash"></i></button>
-                                ${i > 0 ? `<button class="btn bg-gray-600 py-2 px-2 text-xs" onclick="swapLab(${i}, ${i-1})" title="Move Up"><i class="fas fa-arrow-up"></i></button>` : ''}
-                                ${i < 3 ? `<button class="btn bg-gray-600 py-2 px-2 text-xs" onclick="swapLab(${i}, ${i+1})" title="Move Down"><i class="fas fa-arrow-down"></i></button>` : ''}
+                            <div class="admin-controls w-full mt-4 flex flex-col gap-2">
+                                <div class="flex gap-2 justify-center w-full">
+                                    <button class="btn bg-amber-500 hover:bg-amber-600 py-1 px-3 text-xs w-full" onclick="document.getElementById('file-upload-${i}').click()"><i class="fas fa-sync-alt mr-2"></i> Local Replace</button>
+                                    ${isLocal ? `<button class="btn bg-red-500 hover:bg-red-600 py-1 px-3 text-xs" onclick="deleteLab(${i})"><i class="fas fa-trash"></i></button>` : ''}
+                                </div>
+                                <p class="text-xs text-muted">Admin uploading here overrides the public link on this device only.</p>
                             </div>
-                    `;
-                } else {
-                    cardHtml += `
-                            <div class="w-16 h-16 rounded-full bg-gray-700 flex items-center justify-center mb-4 opacity-50">
-                                <i class="fas fa-file-excel text-2xl text-gray-400"></i>
-                            </div>
-                            <p class="text-sm text-muted mb-4">No assessment uploaded yet.</p>
-                            
-                            <div class="public-controls w-full mt-auto">
-                                <button class="btn bg-gray-600 cursor-not-allowed w-full opacity-50" disabled>Unavailable</button>
-                            </div>
-                            
-                            <div class="admin-controls w-full mt-auto">
-                                <button class="btn bg-primary hover:bg-secondary w-full" onclick="document.getElementById('file-upload-${i}').click()"><i class="fas fa-upload mr-2"></i>Upload PDF/Img</button>
-                            </div>
-                    `;
-                }
-
-                cardHtml += `
                         </div>
                         <input type="file" id="file-upload-${i}" class="hidden" accept="application/pdf, image/*" onchange="handleFileUpload(event, ${i})">
                     </div>
@@ -1634,12 +1505,10 @@
             }
         }
 
-        // File Management
         function handleFileUpload(event, index) {
             const file = event.target.files[0];
             if(!file) return;
             
-            // Limit to ~2.5MB to comfortably fit within 5MB LocalStorage limit
             if(file.size > 2.5 * 1024 * 1024) {
                 alert("File is too large! Please upload a file smaller than 2.5MB for Local Storage demo.");
                 return;
@@ -1660,43 +1529,40 @@
         }
 
         function deleteLab(index) {
-            if(confirm("Are you sure you want to delete this assessment?")) {
+            if(confirm("Remove local override? (Will revert back to Google Drive link)")) {
                 labData[index] = null;
                 saveLabsData();
                 renderLabs();
             }
         }
 
-        function swapLab(idx1, idx2) {
-            const temp = labData[idx1];
-            labData[idx1] = labData[idx2];
-            labData[idx2] = temp;
-            saveLabsData();
-            renderLabs();
-        }
-
         function saveLabsData() {
             try {
                 localStorage.setItem('applied_stats_labs', JSON.stringify(labData));
             } catch (e) {
-                alert("Storage Limit Exceeded! Local Storage can only hold ~5MB of data. Try uploading smaller files.");
+                alert("Storage Limit Exceeded! Local Storage can only hold ~5MB of data.");
             }
         }
 
-        // Lightbox Viewer
-        function openLightbox(index) {
-            const lab = labData[index];
-            if(!lab) return;
-
-            document.getElementById('lightbox-title').innerText = `Lab ${index + 1}: ${lab.name}`;
-            document.getElementById('lightbox-download').href = lab.data;
-            document.getElementById('lightbox-download').download = lab.name;
-
-            const frameContainer = document.getElementById('lightbox-frame');
-            if(lab.type.startsWith('image/')) {
-                frameContainer.innerHTML = `<img src="${lab.data}" alt="Lab Assessment Preview" style="width:100%; height:100%; object-fit:contain;">`;
+        function openLightbox(url, isLocal) {
+            document.getElementById('lightbox-title').innerText = `Document Viewer`;
+            
+            const frameContainer = document.getElementById('pdf-frame');
+            
+            if(isLocal && url.startsWith('data:image')) {
+                frameContainer.outerHTML = `<img class="pdf-frame" id="pdf-frame" src="${url}" style="object-fit:contain;">`;
             } else {
-                frameContainer.innerHTML = `<iframe class="pdf-frame" src="${lab.data}"></iframe>`;
+                let embedUrl = url;
+                // If it's a google drive link, convert to preview for iframe
+                if(url.includes('drive.google.com')) {
+                    embedUrl = url.replace('/view', '/preview');
+                }
+                
+                if (document.getElementById('pdf-frame').tagName.toLowerCase() === 'img') {
+                    document.getElementById('pdf-frame').outerHTML = `<iframe class="pdf-frame" id="pdf-frame" src="${embedUrl}"></iframe>`;
+                } else {
+                    document.getElementById('pdf-frame').src = embedUrl;
+                }
             }
 
             document.getElementById('lightbox-modal').classList.add('active');
@@ -1704,10 +1570,11 @@
 
         function closeLightbox() {
             document.getElementById('lightbox-modal').classList.remove('active');
-            document.getElementById('lightbox-frame').innerHTML = ''; // clear memory
+            if (document.getElementById('pdf-frame').tagName.toLowerCase() === 'iframe') {
+                document.getElementById('pdf-frame').src = ''; 
+            }
         }
         
-        // Initial Admin Icon state setup
         if(isAdmin) {
              document.getElementById('admin-icon').classList.replace('fa-lock', 'fa-unlock');
         }
